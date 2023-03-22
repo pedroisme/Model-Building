@@ -1,4 +1,5 @@
-#Calo-Predictor: Recipe Calorie Estimation using Fat and Sugar Content"
+
+# Calo-Predictor: Recipe Calorie Estimation using Fat and Sugar Content"
 
 Name(s): Jade Zhou / Zeyang Yu
 
@@ -7,6 +8,7 @@ Name(s): Jade Zhou / Zeyang Yu
 <p align="center">
   <img src="food.JPG" width="550" title="hover text">
 </p>
+
 ## Framing the problem
 
 In this project,We aim to predict the calorie content of each recipe, which is a regression problem. The response variable we are predicting is "calorie", chosen because it is an essential aspect of the nutritional value of a recipe. Understanding calorie content helps users make informed decisions about the meals they prepare or consume, as it allows them to manage their daily calorie intake and maintain a balanced diet.
