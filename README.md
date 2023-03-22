@@ -22,3 +22,15 @@ We created two baseline models to predict the calorie content of recipes, one us
 The two features we use in our model are the amounts of fat and sugar in the recipes.Both of these features are quantitative, as they represent numerical values. There are no ordinal or nominal features in the baseline model.
 
 By using the Decision Tree model, we obtained an R^2 score of 0.70. However, when using the Linear Regression model, the R^2 score increased to 0.79, which is clearly higher. Therefore, we chose the Linear Regression model as our preferred baseline model due to its better performance in explaining the variance in the calorie content based on the fat and sugar features.
+
+##  Final Model:
+
+We introduced two new features in the final model to enhance its performance: the sum of fat and sugar, and the absolute value of the difference between fat and sugar. After multiple tests, we found that fat and sugar have the closest relationship with calories, while other nutrition variables tend to lower the R^2 score. Thus, we decided to create new features based on fat and sugar, which allowed the model to capture more nuanced information that wasn't present in the original features. This increased understanding of the relationships between fat, sugar, and calories led to more accurate predictions.
+
+Initially, we considered using a linear regression model for the final analysis. However, we faced challenges in finding an appropriate hyperparameter, so we opted for ridge regression instead. Ridge regression is similar to linear regression, but it includes a regularization term controlled by the hyperparameter alpha. By selecting an optimal alpha value, we can prevent overfitting and improve the accuracy of predictions on unseen data.
+
+To determine the best alpha value for our ridge regression model, we employed GridSearchCV, with a potential alpha range from 1 to 10. The optimal alpha value was found to be 1. With the addition of the two new features and the optimal alpha, our final model achieved an R^2 score of 0.89. This represents a significant improvement of 0.1 compared to the linear regression baseline model, demonstrating the effectiveness of our feature and model selection choices in enhancing the model's performance.
+
+To validate our choice of the Ridge Regression model, we calculated the R^2 score for a Decision Tree model using all four features and applied GridSearchCV to find the optimal tree depth. This alternative model had an R^2 score of 0.80, indicating that the two new features indeed improved the accuracy compared to the Decision Tree baseline model. However, the R^2 score of 0.80 was still lower than that of the final Ridge Regression model, confirming that Ridge Regression was a better fit for our dataset.
+
+In conclusion, the final model predicts recipe calorie content using four features and employs Ridge Regression with an optimal alpha value of 1. The R^2 score for unseen data is 0.89, which is the highest score achieved through our manual iterative method. This demonstrates a clear improvement over the baseline model's performance.
