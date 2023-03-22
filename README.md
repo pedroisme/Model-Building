@@ -5,7 +5,7 @@ Name(s): Jade Zhou / Zeyang Yu
 
 ---
 <p align="center">
-  <img src="food.JPG" width="350" title="hover text">
+  <img src="food.JPG" width="550" title="hover text">
 </p>
 ## Framing the problem
 
